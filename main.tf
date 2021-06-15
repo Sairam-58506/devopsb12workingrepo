@@ -22,7 +22,7 @@ resource "aws_vpc" "default" {
     Name        = "${var.vpc_name}"
     Owner       = "Deepu"
     contact     = "sairamnaidu585@gmail.com"
-    #phone       = "8341832285"
+    phone       = "8341832285"
     environment = "${var.environment}"
   }
 
