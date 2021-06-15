@@ -21,8 +21,6 @@ resource "aws_vpc" "default" {
   tags = {
     Name        = "${var.vpc_name}"
     Owner       = "NavDeep Kumar"
-    contact     = "sairamnaidu585@gmail.com"
-    phone       = "8341832285"
     environment = "${var.environment}"
   }
 
