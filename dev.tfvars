@@ -1,7 +1,7 @@
 aws_access_key = "AKIA5ZTSWI7OFGIOO43L"
 aws_secret_key = "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"
 aws_region = "us-east-1"
-#aws_region = "ap-southeast-1"
+aws_region = "ap-southeast-1"
 vpc_cidr = "192.168.0.0/16"
 public_subnet1_cidr = "192.168.1.0/24"
 public_subnet2_cidr = "192.168.2.0/24"
