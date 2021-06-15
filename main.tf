@@ -6,7 +6,7 @@ provider "aws" {
 }
 
 terraform {
-  required_version = "<= 0.14" #Forcing which version of Terraform needs to be used
+  required_version = "<= 1.0.0" #Forcing which version of Terraform needs to be used
   required_providers {
     aws = {
       version = "<= 3.0.0" #Forcing which version of plugin needs to be used.
@@ -20,9 +20,10 @@ resource "aws_vpc" "default" {
     enable_dns_hostnames = true
     tags = {
         Name = "${var.vpc_name}"
-	Owner = "Sreeharsha Veerapalli"
+	Owner = "Deepu"
 	environment = "${var.environment}"
     }
+    
 }
 
 resource "aws_internet_gateway" "default" {
@@ -101,6 +102,15 @@ resource "aws_security_group" "allow_all" {
     cidr_blocks     = ["0.0.0.0/0"]
     }
 }
+terraform {
+  backend "s3" {
+    bucket = "devopsb12"
+    key    = "myterraform.tfstate"
+    region = "us-east-1"
+  }
+}
+
+
 
 # data "aws_ami" "my_ami" {
 #      most_recent      = true
